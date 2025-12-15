@@ -36,16 +36,22 @@ export const useGemini = () => {
     history.value.push({ role: 'ai', content: '', loading: true });
 
     try {
-      const contents = history.value
+      const contents = [
+        {
+          role: "model",
+          parts: [{text: SYSTEM_PROMPT}]
+        },
+        ...history.value
         .filter(msg => msg.content)
         .map(msg => ({
           role: msg.role === 'user' ? 'user' : 'model',
           parts: [{ text: msg.content }]
-        }));
+        }))
+      ];
 
         const result = await genAI.models.generateContent({
           model: "gemini-2.5-flash",
-          contents: contents,
+          contents,
         });
 
         const aiResponseText = result.text; 
