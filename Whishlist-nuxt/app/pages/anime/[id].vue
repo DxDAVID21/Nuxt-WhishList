@@ -1,13 +1,10 @@
 <script setup>
-import {onMounted, ref} from 'vue';
-import { useRoute } from 'vue-router';
 import { useAnimeDetail } from '@/composables/useAnimeDetail.js';
 import { useFavoriteStore } from '@/stores/favoriteStore';
 
 const activeTab = ref("characters");
 
 const route = useRoute();
-console.log("Route PARAMS:", route.params);
 
 const favoriteStore = useFavoriteStore();
 
@@ -22,8 +19,7 @@ function toggleFav() {
   }
 }
 
-const id = Number(route.params.id);
-console.log("Anime Detail ID:", id);  
+const id = Number(route.params.id);  
 
 const { anime, characters, staff, recommendations, video, loading, error, fetchAnime } = useAnimeDetail();
 

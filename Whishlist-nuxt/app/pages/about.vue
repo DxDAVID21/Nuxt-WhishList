@@ -1,7 +1,6 @@
 <template>
   <section class="max-w-5xl mx-auto px-6 py-16 text-gray-900 dark:text-white">
 
-    <!-- Title -->
     <div class="text-center mb-12">
       <h1 class="text-5xl font-extrabold tracking-tight mb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
@@ -13,13 +12,11 @@
       </p>
     </div>
 
-    <!-- Card -->
     <div
       class="bg-white dark:bg-gray-800 shadow-xl rounded-3xl p-10 border border-gray-200 dark:border-gray-700
              backdrop-blur-sm transition-all duration-300 hover:shadow-2xl"
     >
 
-      <!-- Purpose -->
       <h2 class="text-3xl font-semibold mb-4">🎯 Objectiu de l’App</h2>
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Aquesta aplicació és una eina moderna per explorar animes, pensada per oferir una interfície neta,
@@ -27,7 +24,6 @@
         guardar favorits.
       </p>
 
-      <!-- Technologies -->
       <h2 class="text-3xl font-semibold mb-4">🛠️ Tecnologies Utilitzades</h2>
       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10 text-gray-700 dark:text-gray-300">
         <li class="flex items-center gap-2"><span class="text-indigo-400 text-xl">⚡</span> Vue 3</li>
@@ -38,14 +34,12 @@
         <li class="flex items-center gap-2"><span class="text-red-400 text-xl">📱</span> Disseny Responsive</li>
       </ul>
 
-      <!-- Vision -->
       <h2 class="text-3xl font-semibold mb-4">🚀 Visió</h2>
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
         L’objectiu és facilitar la cerca i descoberta d’animes d’una manera visualment atractiva i ràpida.
         Futures millores inclouran perfils d’usuari, recomanacions basades en preferències i filtres avançats.
       </p>
 
-      <!-- Social links -->
       <div class="text-center mt-12">
         <h3 class="text-2xl font-semibold mb-4">🌐 Xarxes Socials</h3>
         <div class="flex justify-center gap-6 text-xl">
@@ -55,7 +49,6 @@
         </div>
       </div>
 
-      <!-- Back button -->
       <div class="mt-14 text-center">
         <NuxtLink
           to="/"
@@ -65,8 +58,6 @@
           Tornar a l'Inici
         </NuxtLink>
       </div>
-
     </div>
-
   </section>
 </template>

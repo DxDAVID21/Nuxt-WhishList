@@ -1,4 +1,3 @@
-import { ref, inject } from "vue";
 import { jikan } from "@/api/jikan.js";
 import { useGlobalLoading } from "@/composables/useGlobalLoading";
 

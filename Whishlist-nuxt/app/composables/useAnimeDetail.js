@@ -1,5 +1,5 @@
-import {ref, inject} from "vue";
 import {jikan} from "@/api/jikan.js";
+import { useGlobalLoading } from "@/composables/useGlobalLoading";
 
 
 export function useAnimeDetail() {
@@ -11,7 +11,7 @@ export function useAnimeDetail() {
   const error = ref(null);
   const video = ref(null);
 
-  const globalLoading = inject("globalLoading");
+  const globalLoading = useGlobalLoading();
 
   const wait = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -21,7 +21,6 @@ export function useAnimeDetail() {
       loading.value = true;
       error.value = null;
 
-      // 1) Anime
       const animeRes = await jikan.anime(id);
       anime.value = animeRes.data.data;
       
@@ -29,21 +28,18 @@ export function useAnimeDetail() {
       const videoRes = await jikan.video(id);
       video.value = videoRes.data.data;
 
-      await wait(700); // evita el 429
+      await wait(700);
 
-      // 2) Characters
       const charRes = await jikan.characters(id);
       characters.value = charRes.data.data;
 
       await wait(700);
 
-      // 3) Staff
       const staffRes = await jikan.staff(id);
       staff.value = staffRes.data.data;
 
       await wait(700);
 
-      // 4) Recommendations
       const recRes = await jikan.recommendations(id);
       recommendations.value = recRes.data.data;
       

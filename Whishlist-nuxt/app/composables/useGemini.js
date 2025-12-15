@@ -1,4 +1,3 @@
-import { ref } from "vue";
 import * as googleGenAIModule from "@google/genai"; 
 
 const GoogleGenAI = googleGenAIModule.GoogleGenAI || googleGenAIModule.default.GoogleGenAI;

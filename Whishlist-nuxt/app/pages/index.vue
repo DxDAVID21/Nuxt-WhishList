@@ -11,7 +11,6 @@ function goToFavorites() {
 <template>
   <div class="min-h-screen bg-gray-100 text-gray-900 flex flex-col items-center px-6 dark:bg-gray-900 dark:text-white transition-colors">
 
-    <!-- Hero Section -->
     <section class="w-full max-w-4xl text-center py-24">
       <h1 class="text-5xl font-extrabold tracking-tight">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 dark:from-indigo-400 dark:to-purple-500">
@@ -31,7 +30,6 @@ function goToFavorites() {
       </button>
     </section>
 
-    <!-- Features -->
     <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
 
       <div class="p-6 bg-white border-gray-200 dark:bg-gray-800/60 rounded-2xl border dark:border-gray-700 shadow hover:shadow-xl transition">
@@ -51,7 +49,6 @@ function goToFavorites() {
 
     </section>
 
-    <!-- Footer -->
     <footer class="mt-20 text-gray-500 text-sm dark:text-gray-500">
       Fet amb ❤️ per David — 2025
     </footer>

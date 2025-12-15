@@ -1,5 +1,5 @@
 <script setup>
-import { ref, nextTick, watch } from "vue";
+import { nextTick, watch } from "vue";
 import { useGemini } from "@/composables/useGemini.js"; 
 
 const { history, isGenerating, error, sendMessage } = useGemini();

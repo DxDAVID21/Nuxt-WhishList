@@ -1,6 +1,8 @@
 <script setup>
 import { useFavoriteStore } from "@/stores/favoriteStore";
 
+const router = useRouter();
+
 const { anime } = defineProps({
   anime: {
     type: Object,
@@ -20,7 +22,7 @@ function toggleFav() {
   }
 }
 
-const go = () => {
+function go() {
   router.push(`/anime/${anime.mal_id}`);
 }
 </script>
